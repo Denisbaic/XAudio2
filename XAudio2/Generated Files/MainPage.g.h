@@ -39,6 +39,7 @@ namespace XAudio2
     
     
         private: ::Windows::UI::Xaml::Controls::TextBlock^ errorText;
+        private: ::Windows::UI::Xaml::Controls::Button^ pauseButton;
         private: ::Windows::UI::Xaml::Controls::Button^ submitButton;
     };
 }

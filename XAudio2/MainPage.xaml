@@ -9,16 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Name="errorText"
-                   FontSize="24"
-                   TextWrapping="Wrap"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
-        <Button Name="submitButton"
-                Content="Submit Audio Button"
-                Visibility="Collapsed"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Click="OnSubmitButtonClick" />
+        <TextBlock x:Name="errorText" HorizontalAlignment="Left" Margin="750,500,0,0" Text="errorText" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="pauseButton" Content="pause" HorizontalAlignment="Left" Margin="675,602,0,0" VerticalAlignment="Top"  Click="OnPauseButtonClick"/>
+        <Button x:Name="submitButton" Content="submitButton" HorizontalAlignment="Left" Margin="603,489,0,0" VerticalAlignment="Top"  Click="OnSubmitButtonClick"/>
     </Grid>
 </Page>

@@ -37,6 +37,13 @@ void ::XAudio2::MainPage::Connect(int __connectionId, ::Platform::Object^ __targ
         break;
     case 3:
         {
+            this->pauseButton = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->pauseButton))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::XAudio2::MainPage::*)
+                (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::OnPauseButtonClick);
+        }
+        break;
+    case 4:
+        {
             this->submitButton = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
             (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->submitButton))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::XAudio2::MainPage::*)
                 (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::OnSubmitButtonClick);
