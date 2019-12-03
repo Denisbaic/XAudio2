@@ -14,8 +14,15 @@ namespace XAudio2
 	/// </summary>
 	public ref class MainPage sealed
 	{
+	private:
+		Microsoft::WRL::ComPtr<IXAudio2> pXAudio2;
+		IXAudio2MasteringVoice * pMasteringVoice;
+		IXAudio2SourceVoice * pSourceVoice;
+		byte soundData[2 * 5 * 44100];
 	public:
 		MainPage();
-
+	private:
+		void OnSubmitButtonClick(Platform::Object^ sender,
+			Windows::UI::Xaml::RoutedEventArgs^ args);
 	};
 }
